@@ -1,0 +1,88 @@
+<html>
+   <head>
+         <title>JavaScript functions </title>
+         
+         <style>
+            body{background-image: url('login.jpg');
+         background-size: cover;
+         padding-top: 70px;
+            }
+            form,h2{
+               font-size: 40px;
+               color: antiquewhite;
+            }
+            
+
+
+
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px black;
+  box-sizing:content-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit]{
+  background-color:darkcyan;
+  color: white;
+  font-size: 20px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+input[type=submit]:hover{
+   opacity: 0.8;
+
+}
+.container{
+  padding: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+         </style>
+         
+      </head>      
+      <script>
+      
+         // User Validations
+ function loginValidation() {
+             // Ramesh
+   var uname = document.myform.uname.value;
+              //Ramesh@123
+   var password = document.myform.psw.value;
+             if(uname==null || uname=="") {
+               alert("Name cant be blank")
+               return false;  
+            } else if (password.length<6){
+               alert("Password Must be 6 letters")
+               return false;
+            }  
+            return true ;                
+         }           
+      </script>
+      
+      <body>
+         <center>
+         
+            
+          <h2>Login Form</h2>
+            <div class="container">
+               <form name="myform" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)">
+ 
+                  User Name : <input type="text" name="uname" placeholder="Enter username"> <br>
+                  Password :  <input type="password" name="psw" placeholder="Enter password"> <br>
+                           <input type="submit"  value="Login">
+                          
+             
+            </div>
+          </form>
+          </center>
+   </body>
+</html>
